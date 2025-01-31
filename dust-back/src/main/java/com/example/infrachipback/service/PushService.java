@@ -41,7 +41,7 @@ public class PushService {
                         latestAlert.putAll(latestData); //최신 데이터를 저장
 
                         //상태를 좋음 또는 나쁨으로 설정
-                        if (pm10Value > 10 || pm25Value > 5) {
+                        if (pm10Value >= 80 || pm25Value >= 35) {
                             latestAlert.put("status", "나쁨");
                         } else {
                             latestAlert.put("status", "좋음");
